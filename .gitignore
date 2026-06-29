@@ -1,0 +1,12 @@
+# Python
+python-tests/.venv/
+__pycache__/
+*.pyc
+
+# LiteLLM secrets (config ima master key!)
+litellm/config.yaml
+
+# Outputs (generisani fajlovi, ne treba u repo)
+outputs/
+file-organizer/
+litellm/
