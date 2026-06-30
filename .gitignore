@@ -10,3 +10,5 @@ litellm/config.yaml
 # outputs/
 # file-organizer/
 # litellm/
+
+*.docx
