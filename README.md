@@ -1,35 +1,44 @@
-### Projekt: AI Razvojna Platforma
+**Project Overview**
+=====================
 
-#### Project Overview
+LiteLLM AI Development Stack Projekat je lokalni projekat koji koristi Docker i n8n za automatsku implementaciju različitih faza razvoja aplikacija. Prosjecno, ovaj projekat omogućava korisnicima da kreiraju, testiraju i pobacuju AI modelove uz pomoć LiteLLM-a, kao što su uključene oznaka reci (OCR), prepoznaji gole (whisper) i analiza slike (image).
 
-AI razvojna platforma je projekat koji omogućava razmišljanje i izvršavanje različitih AI taksija, kao što su OCR, sintetizacija glasova i slično. Projekt koristi nuklearnu arhitekturu sa Dockerom i n8n integracijom, što omogućava lokalno izvršavanje bez troškova za cloud API.
+ Projekat koristi FFmpeg za procesiranje videa i Tesseract OCR za raznostu slike. Playwright se koristi za automatizirani testiranje web aplikacija, a Open WebUI daje mogućnost korisnicima da pristupaju interaktivnom pokrovima. Qdrant koriste kao odgovorno uklopno sistema koji omogućava korisnicima da pristupaju i izvode rezultate različitih testova.
 
-#### Stack
+ Projekat je dizajniran za lokalnu radnju, što znači da korisnici ne moraju plačati nula-troškove za procesiranje podataka. Uz pomoć Docker-a i n8n-a, ovaj projekat omogućava korisnicima da kreiraju i implementiraju različite faze razvoja AI modela uključujući treniranje, testiranje i pobacivanje.
 
-*   **Docker**: Koristimo Docker kao osnovnu platformu za izvršavanje projekta.
-*   **Ollama**: Koristimo Ollamu kao različite AI modelove, kao što su OCR i sintetizacija glasova.
-*   **LiteLLM**: Koristimo LiteLLM kao korisničke API za interakciju s različitim AI modelima.
-*   **n8n**: Koristimo n8n kao integritorsku platformu za povezivanje različitih taksija i procesa.
-*   **Qdrant**: Koristimo Qdrant kao baznu baznu bazu podataka za sačuvanja rezultata i informacije o projektu.
-*   **Open WebUI**: Koristimo Open WebUI kao korisničko interfejsu za pristup projektu i njegove funkcionalnosti.
-*   **Playwright**: Koristimo Playwright kao browsera za različite web strane.
-*   **Tesseract OCR**: Koristimo Tesseract OCR kao OCR tehnologije za scanciranje i analizu tekstualnog sadržaja.
-*   **FFmpeg**: Koristimo FFmpeg kao biblioteke za izvršavanje video i audio procesora.
-*   **faster-whisper**: Koristimo faster-whisper kao biblioteke za izvršavanje sintetizacije glasova.
+**Stack**
+---------
 
-#### Project Structure
+*   Docker
+*   LiteLLM
+*   n8n
+*   Qdrant
+*   Open WebUI
+*   Playwright
+*   Tesseract OCR
+*   FFmpeg
+*   faster-whisper
 
- Projekt je organiziran u sledeći način:
+**Project Structure**
+=====================
 
-*   `/outputs/`: Sadržaj koji se izdvaja iz procesa.
-*   `python-tests/`: Sadržaj kojeg koristimo za različite testove i provere projekta.
+Projekat je organiziran u sledeći način:
 
-#### How to Run
+| Sekcija | Fajlovi |
+| :------------------------------------- | :--------------------------------- |
+| `outputs`                                 | `.gitkeep`                           |
+| `python-tests`                            | `.gitignore`, `.python-version`, `pyproject.toml`, `uv.lock` |
+|                                                    | `generate_readme.py`, `git_pipeline.py`, `full_pipeline.py`, `main.py`, `make_test_image.py`, `mini4_ocr_summary.py`, `test.wav`, `test_image.png`, `test_playwright.py`, `test_real.wav`, `test_whisper.py` |
+| `file-organizer`                          | Nije uključen u ovaj projekat                           |
 
-Da bi se izvršilo projekt, morate slatisi sledeće stepene:
+**How to Run**
+================
 
-1.  Izvršiti komande `docker-compose up` da biste izveli Docker kontajner.
-2.  Pokrenite korisnički interfejs sa `/open-webui/`.
-3.  Pokrenite `python-tests/full_pipeline.py` ili sledeće korisničke skripte kako bi se izvršilo različito testovo.
+1.  **Pridrijedi projekat na localni komponent**: Pritisni "Git clone" i pridržite link na GitHubu.
+2.  **Instaliraj potrebne dependencies**: Korišćenje komande `docker-compose up -d` ili `n8n start`.
+3.  **Kreiraj novi projekat u n8n**: Pritisni `New node` i unesi URL `http://localhost:9000/n8n` u polje `Webhook`.
+4.  **Pobaci različite faze razvoja AI modela**: Pokrenite komandu `python-tests/full_pipeline.py` ili `python-tests/generate_readme.py`.
+5.  **Proveri rezultate i implementiraj novu fazu razvoja**: Pokrenite komandu `python-tests/git_pipeline.py` ili `python-tests/mini4_ocr_summary.py`.
 
-Zbog potrebe za lokalnim izvršavanjem, ova platforma radi bez troškova za cloud API-a.
+Ukoliko imate neka pitanja ili potrebno pomoć, slobodan se kontaktira na [GitHub](https://github.com/user/litellm-ai-development-stack).
