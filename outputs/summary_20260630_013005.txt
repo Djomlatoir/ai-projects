@@ -1,7 +1,0 @@
-ORIGINAL:
-Danassam instalitao kompletan Al development tack
-Slack ukljucuje Docker, nr LiteLLM, Garant Whisper.
-Suiservis rade lokalno bez placanja API troskova
-
-SAŽETAK:
-User je instalirao Al development stack na svom sistemau i sada koristi Slackov ogled za Docker, LiteLLM i Garant Whisper. Ovo omogućuje koristan localni servis bez potrebe plaćanja API troškova.
