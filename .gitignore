@@ -6,7 +6,7 @@ __pycache__/
 # LiteLLM secrets (config ima master key!)
 litellm/config.yaml
 
-# Outputs (generisani fajlovi, ne treba u repo)
-outputs/
-file-organizer/
-litellm/
+# # Outputs (generisani fajlovi, ne treba u repo)
+# outputs/
+# file-organizer/
+# litellm/
