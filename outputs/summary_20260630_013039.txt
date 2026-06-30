@@ -1,7 +1,0 @@
-ORIGINAL:
-Danas sam instalirao kompletan Al development tack
-Stack ukljucuje Docker, nr LiteLLM, Garant Whisper.
-Suiservis rade lokalno bez placanja API troskova
-
-SAŽETAK:
-Nekadašnji korisnik saznao je da je instalirao puni Al Development stack, koji sadrži Docker, LLaMA i garantnu verziju Whisper. Sada može koristiti ove servise lokalno, bez obaveze plaćanja API troškova.
