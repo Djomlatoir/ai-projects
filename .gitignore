@@ -12,3 +12,7 @@ litellm/config.yaml
 # litellm/
 
 *.docx
+
+*.exe
+*.o
+*.out
